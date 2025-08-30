@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel - SPTec</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="csrf-token" content="qv6AgMfWax1UXWNkX2UAIUECoWLcFcxRZ3sfzBleBqLZXZWRO3Xk9lS6pS6ZFqKt">
+  <link rel="stylesheet" href="semantic.min.css">
+  <link rel="stylesheet" href="tecnico.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.9.3/semantic.min.css">
+  <link rel="stylesheet" href="/static/css/tecnico.css">
+  <link rel="stylesheet" href="/static/css/global.css">
+  <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
+
+  <input type="hidden" name="csrfmiddlewaretoken" value="qv6AgMfWax1UXWNkX2UAIUECoWLcFcxRZ3sfzBleBqLZXZWRO3Xk9lS6pS6ZFqKt">
+</head>
+<body class="dark-theme">
+  <!-- Notification container -->
+  <div id="notification-container"></div>
+
+  <!-- Logo centralizada no topo (removida) -->
+  
+  <div class="layout-container">
+    <!-- Sidebar -->
+    
+<!-- filepath: core/templates/components/sidebar_tecnico.html -->
+
+<aside id="sidebar">
+  <div class="logo-container">
+  </div>
+
+  
+  <a href="/meus-chamados/" class="menu-item active">
+    <i class="user wrench icon"></i>
+    <span class="title">Meus chamados</span>
+  </a>
+  
+  
+  <div class="ui divider sidebar-divider"></div>
+</aside>
+<script src="jquery-3.6.0.min.js"></script>
+<script src="semantic.min.js"></script>
+<script src="app.js"></script>
+<script src="app_tecnico.js"></script>
+
+    <div class="content-wrapper">
+      <!-- Header Bar com logo -->
+      <div class="header-bar">
+        <div>
+          <img src="img/logo-dark.png" 
+               alt="SPTEC" 
+               class="logo-header">
+        </div>
+        <div class="user-section">
+          <span class="username">ge.parma</span>
+          <div class="ui dropdown settings-dropdown">
+            <i class="settings icon"></i>
+            <div class="menu">
+              <div class="item" id="trocar-senha-dropdown">
+                <i class="lock icon"></i>
+                Trocar Senha
+              </div>
+              <div class="item" id="toggle-theme-dropdown">
+                <i class="adjust icon"></i>
+                Alternar Tema
+              </div>
+              <a class="item" href="/logout/">
+                <i class="sign out alternate icon"></i>
+                Sair
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-content">
+        
+<div class="ui fluid container">
+  <h2 class="ui header">Meus Chamados</h2>
+  
+
+  
+  
+
+  <div class="responsive-chamados-list">
+    <!-- Ordens ativas -->
+    
+      <div class="ui fluid card chamado-card ">
+        <div class="content">
+          <div class="header">#000</div>
+          <div class="meta">29/08/2025 17:04</div>
+          <div class="description">
+            <strong>0000 - Av. Mario de Andrade, 563 - Barra Funda - SP</strong>
+            
+              <div style="margin: 0.5em 0; color: #555;">
+                <b>Observação:</b> REPARO
+              </div>
+            
+            
+            <div class="status-label" style="margin: 0.5em 0;">
+              <span class="ui orange label">
+                Atribuída
+              </span>
+            </div>
+            <div class="status-label" style="margin: 0.5em 0;">
+              <span class="ui red label">
+                Tecnologia 4G
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="extra content flex-actions">
+          <div class="action-buttons">
+            
+              <a href="https://www.google.com/maps?q=-23.52669731,-46.66652343" target="_blank" class="ui green button map-button" title="Ver no mapa">
+                <i class="map marker alternate icon"></i>
+              </a>
+            
+            
+            
+              
+                <button class="ui blue button iniciar-btn action-button" 
+                        data-ordem-id="9979"
+                        data-ordem-descricao="0279 - Av. Mario de Andrade, 563 - Barra Funda - SP">
+                  <i class="play icon"></i> Iniciar
+                </button>
+              
+            
+          </div>
+        </div>
+      </div>
+    
+      <div class="ui fluid card chamado-card ">
+        <div class="content">
+          <div class="header">#00001</div>
+          <div class="meta">29/08/2025 17:01</div>
+          <div class="description">
+            <strong>0001 - Av. Pompeia, 1760 - Pinheiros, SP</strong>
+            
+              <div style="margin: 0.5em 0; color: #555;">
+                <b>Observação:</b> reparo
+              </div>
+            
+            
+            <div class="status-label" style="margin: 0.5em 0;">
+              <span class="ui orange label">
+                Atribuída
+              </span>
+            </div>
+            
+            <a href="https://www.google.com/maps?q=-23.538883,-46.690872" target="_blank"  title="Ver no mapa">
+                <i class="ui red label">Tecnologia Fibra Optica Tim Endereço da CTO IHS</i>
+            </a>
+            <a href="img/nomecto.jpeg" target="_blank"  title="Nome da CTO">
+                <i class="ui gray label" >Endereço CTO</i>
+            </a>
+          </div>
+        </div>
+        <div class="extra content flex-actions">
+          <div class="action-buttons">
+            
+              <a href="https://www.google.com/maps?q=-23.538883,-46.690872" target="_blank" class="ui green button map-button" title="Ver no mapa">
+                <i class="map marker alternate icon"></i>
+              </a>
+            
+            
+            
+              
+                <button class="ui blue button iniciar-btn action-button" 
+                        data-ordem-id="9971"
+                        data-ordem-descricao="0931 - Av. Pompeia, 1760 - Pinheiros, SP">
+                  <i class="play icon"></i> Iniciar
+                </button>
+              
+            
+          </div>
+        </div>
+      </div>
+    
+    
+  </div>
+
+  <!-- Accordion para concluídas/canceladas -->
+  <div class="ui styled fluid accordion" id="accordion-historico-os" style="margin-top:2em;">
+    <div class="title">
+      <i class="dropdown icon"></i>
+      Ordens Concluídas (1)
+    </div>
+    <div class="content">
+      <div class="responsive-chamados-list">
+        
+          <div class="ui fluid card chamado-card concluida">
+            <div class="content">
+              <div class="header">#0000</div>
+              <div class="meta">28/08/2025 18:49</div>
+              <div class="description">
+                <strong>611 - AV. RAGUEB CHOHFI, 4708 - JARDIM IGUATEMI</strong>
+                
+                  <div style="margin: 0.5em 0; color: #555;">
+                    <b>Observação:</b> REPARO
+                  </div>
+                
+                
+                  <div style="margin: 0.5em 0; color: #276f42;">
+                    <b>Observação do Técnico:</b> Reiniciado shelter
+                  </div>
+                
+                
+                <div class="status-label" style="margin: 0.5em 0;">
+                  <span class="ui green label">
+                    Concluída
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="extra content flex-actions">
+              <div class="action-buttons">
+                
+                  <a href="https://www.google.com/maps?q=-23.594983,-46.44041" target="_blank" class="ui green button map-button" title="Ver no mapa">
+                    <i class="map marker alternate icon"></i>
+                  </a>
+                
+                
+                
+              </div>
+            </div>
+          </div>
+        
+        
+      </div>
+      
+      <!-- Paginação para ordens concluídas -->
+      
+      <div class="ui pagination menu">
+        <!-- Botão primeira página -->
+        
+          <a class="disabled item">
+            <i class="angle double left icon"></i>
+          </a>
+        
+
+        <!-- Botão página anterior -->
+        
+          <a class="disabled item">
+            <i class="angle left icon"></i>
+          </a>
+        
+
+        <!-- Números das páginas -->
+        
+          
+            <a class="active item">1</a>
+          
+        
+          
+            <a class="item" href="?page_concluidas=2">2</a>
+         
+        <!-- Botão próxima página -->
+        
+          <a class="item" href="?page_concluidas=2">
+            <i class="angle right icon"></i>
+          </a>
+        
+
+        <!-- Botão última página -->
+        
+          <a class="item" href="?page_concluidas=16">
+            <i class="angle double right icon"></i>
+          </a>
+        
+      </div>
+
+      <div class="ui right aligned basic segment" style="padding: 0.5em 0;">
+        <small style="color: #666;">
+          Página 1 de 16 
+          (158 registros)
+        </small>
+      </div>
+      
+    </div>
+    <div class="title">
+      <i class="dropdown icon"></i>
+      Ordens Canceladas (1)
+    </div>
+    <div class="content">
+      <div class="responsive-chamados-list">
+        
+          <div class="ui fluid card chamado-card cancelada">
+            <div class="content">
+              <div class="header">#7965</div>
+              <div class="meta">19/08/2025 10:42</div>
+              <div class="description">
+                <strong>3247 - ALAMEDA CAMPINAS, 171 - BELA VISTA, SP</strong>
+                
+                  <div style="margin: 0.5em 0; color: #555;">
+                    <b>Observação:</b> reparo
+                  </div>
+                
+                
+                <div class="status-label" style="margin: 0.5em 0;">
+                  <span class="ui red label">
+                    Cancelada
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="extra content flex-actions">
+              <div class="action-buttons">
+                
+                  <a href="https://www.google.com/maps?q=-23.56306266,-46.65132159" target="_blank" class="ui green button map-button" title="Ver no mapa">
+                    <i class="map marker alternate icon"></i>
+                  </a>
+                
+                
+                
+              </div>
+            </div>
+          </div>
+        
+        
+      </div>
+      
+      <!-- Paginação para ordens canceladas -->
+      
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Confirmação para Iniciar OS -->
+<div class="ui tiny modal" id="iniciar-ordem-modal">
+  <div class="header">
+    <i class="play icon"></i>
+    Iniciar Ordem de Serviço
+  </div>
+  <div class="content">
+    <p>Tem certeza que deseja iniciar a OS <strong>#<span id="iniciar-ordem-numero"></span></strong>?</p>
+    <div class="ui message">
+      <p><strong>Descrição:</strong> <span id="iniciar-ordem-descricao"></span></p>
+    </div>
+  </div>
+  <div class="actions">
+    <button class="ui cancel button">
+      <i class="times icon"></i>
+      Cancelar
+    </button>
+    <button class="ui blue approve button" id="confirmar-iniciar-btn">
+      <i class="play icon"></i>
+      Iniciar
+    </button>
+  </div>
+</div>
+
+<!-- Modal Finalizar -->
+<div class="ui modal" id="finalizar-modal">
+  <div class="header">Finalizar Chamado</div>
+  <div class="content">
+    <form class="ui form" id="finalizar-form" enctype="multipart/form-data" method="post">
+      <input type="hidden" name="csrfmiddlewaretoken" value="qv6AgMfWax1UXWNkX2UAIUECoWLcFcxRZ3sfzBleBqLZXZWRO3Xk9lS6pS6ZFqKt">
+      <input type="hidden" name="ordem_id" id="finalizar-ordem-id">
+
+      <!-- container que será preenchido via JS -->
+      <div id="finalizar-cameras-container"></div>
+
+      <div class="field">
+        <label>Comentários</label>
+        <textarea name="observacao" required></textarea>
+      </div>
+      <div class="field">
+        <label>Foto (opcional)</label>
+        <input type="file" name="foto" accept="image/*">
+      </div>
+      <button type="submit" class="ui primary button">Finalizar</button>
+      <button type="button" class="ui button cancel">Cancelar</button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal Cancelar -->
+<div class="ui modal" id="cancelar-modal">
+  <div class="header">Cancelar Chamado</div>
+  <div class="content">
+    <form class="ui form" id="cancelar-form" enctype="multipart/form-data" method="post">
+      <input type="hidden" name="csrfmiddlewaretoken" value="qv6AgMfWax1UXWNkX2UAIUECoWLcFcxRZ3sfzBleBqLZXZWRO3Xk9lS6pS6ZFqKt">
+      <input type="hidden" name="ordem_id" id="cancelar-ordem-id">
+      <div class="field">
+        <label>Por que deseja cancelar essa OS?</label>
+        <textarea name="observacao" required></textarea>
+      </div>
+      <div class="field">
+        <label>Foto (opcional)</label>
+        <input type="file" name="foto" accept="image/*">
+      </div>
+      <button type="submit" class="ui orange button">Cancelar OS</button>
+      <button type="button" class="ui button cancel">Fechar</button>
+    </form>
+  </div>
+</div>
+
+<script>
+    // Variável para armazenar o ID da ordem que será iniciada
+    var ordemParaIniciar = null;
+
+    // Evento para abrir modal de confirmação ao clicar em iniciar
+    $(document).on('click', '.iniciar-btn', function() {
+      ordemParaIniciar = $(this).data('ordem-id');
+      var ordemDescricao = $(this).data('ordem-descricao');
+      // Preenche os dados no modal
+      $('#iniciar-ordem-numero').text(ordemParaIniciar);
+      $('#iniciar-ordem-descricao').text(ordemDescricao);
+      // Abre o modal
+      $('#iniciar-ordem-modal').modal('show');
+    });
+
+    // Evento para confirmar o início da ordem
+    $(document).on('click', '#confirmar-iniciar-btn', function() {
+      var $btn = $(this);
+      if (!ordemParaIniciar) return;
+      $btn.addClass('loading');
+      $.ajax({
+        url: '/ordens/iniciar/',
+        type: 'POST',
+        data: {
+          'ordem_id': ordemParaIniciar,
+          'csrfmiddlewaretoken': $('[name=csrfmiddlewaretoken]').val()
+        },
+        success: function(response) {
+          if (response.success) {
+            $('#iniciar-ordem-modal').modal('hide');
+            if (typeof showNotification === 'function') {
+              showNotification(response.message, 'positive');
+            } else {
+              alert(response.message);
+            }
+            setTimeout(function() { location.reload(); }, 1000);
+          } else {
+            alert(response.message);
+            $btn.removeClass('loading');
+          }
+        },
+        error: function() {
+          alert('Erro ao iniciar ordem.');
+          $btn.removeClass('loading');
+        }
+      });
+    });
+
+    // Preenche câmeras no modal de finalizar
+    $(document).on('click', '.finalizar-btn', function() {
+      var ordemId = $(this).data('ordem-id');
+      var referencia = $(this).data('referencia');
+      var cameras = $(this).data('cameras');
+      var fotosDoLocal = $(this).data('fotos-do-local') || [];
+      $('#finalizar-ordem-id').val(ordemId);
+      var container = $('#finalizar-cameras-container').empty();
+      var totalCameras = cameras ? cameras.length : 0;
+      var totalFotosLocal = fotosDoLocal ? fotosDoLocal.length : 0;
+      var totalFotosNecessarias = totalCameras + totalFotosLocal;
+      var uploadedPhotos = 0;
+      var camerasWithPhotos = {};
+
+      // Determinar basedados baseado na referência
+      var basedados = 'cameras';
+      if (referencia.includes('GUARULHOS')) {
+        basedados = 'cameras_guarulhos';
+      } else if (referencia.includes('PMMC')) {
+        basedados = 'cameras_pmmc';
+      } else if (referencia.includes('SPSECURITY')) {
+        basedados = 'cameras_sptec';
+      } else if (referencia.includes('SAOROQUE')) {
+        basedados = 'cameras_saoroque';
+      }
+
+      // NOVO: Buscar fotos já enviadas para esta OS (câmeras e tipos) E todas as câmeras do local
+      $.when(
+        $.get('/ordens/fotos_cameras/', { ordem_id: ordemId }),
+        $.get('/ordens/fotos_tipos/', { ordem_id: ordemId }),
+        $.get('/api/cameras_por_referencia/', { referencia: referencia, basedados: basedados })
+      ).done(function(respCameras, respTipos, respTodasCameras) {
+        var fotosPorCamera = (respCameras[0] && respCameras[0].success) ? respCameras[0].fotos : {};
+        var fotosPorTipo = (respTipos[0] && respTipos[0].success) ? respTipos[0].fotos : {};
+        var todasCameras = (respTodasCameras[0] && respTodasCameras[0].cameras) ? respTodasCameras[0].cameras : [];
+
+        if (typeof CameraUploader !== 'undefined') {
+            CameraUploader.uploadStatus = {}; // Limpa o status anterior
+            Object.keys(fotosPorCamera).forEach(function(cameraId) {
+                CameraUploader.uploadStatus[cameraId] = {
+                    status: 'success',
+                    url: fotosPorCamera[cameraId].url
+                };
+            });
+        }
+
+        if (typeof TipoUploader !== 'undefined') {
+            TipoUploader.uploadStatus = {}; // Limpa o status anterior
+            Object.keys(fotosPorTipo).forEach(function(tipoId) {
+                TipoUploader.uploadStatus[tipoId] = {
+                    status: 'success',
+                    url: fotosPorTipo[tipoId].url
+                };
+            });
+        }
+
+              // Adicionar seção de fotos do local
+      if (fotosDoLocal && fotosDoLocal.length) {
+          
+          // Organizar fotos em layout vertical
+          
+          // Função para criar campo de foto do local (similar às câmeras)
+          function createFotoLocalField(foto) {
+            var field = $('<div class="field camera-upload-field"></div>');
+            var label = $('<label><i class="camera icon" style="color: #2185d0;"></i>' + foto.descricao + '</label>');
+            var fileInputContainer = $('<div class="custom-file-input"></div>');
+            var fileInput = $('<input type="file" name="foto_tipo_' + foto.id + '" accept="image/*" capture="camera" style="display:none;">');
+            var cameraIcon = $('<button type="button" class="ui icon button camera-icon-button"><i class="camera icon"></i></button>');
+            var deleteButton = $('<button type="button" class="ui red icon button delete-photo-button" style="display:none;"><i class="trash icon"></i></button>');
+            
+            cameraIcon.on('click', function(e) {
+              e.preventDefault();
+              // Verifica se já existe foto (no status incremental OU no objeto inicial)
+              var fotoStatus = (typeof TipoUploader !== 'undefined' && TipoUploader.uploadStatus && TipoUploader.uploadStatus[foto.id] && TipoUploader.uploadStatus[foto.id].status === 'success');
+              var fotoUrl = fotoStatus ? TipoUploader.uploadStatus[foto.id].url : null;
+              if (fotoUrl) {
+                showTipoFotoPopup(fotoUrl, foto.descricao);
+              } else {
+                fileInput.click();
+              }
+            });
+            
+            // Handler para mudança de arquivo com upload incremental
+            fileInput.on('change', function() {
+              if (this.files && this.files.length > 0) {
+                var file = this.files[0];
+                uploadTipoFoto(foto.id, file, cameraIcon, deleteButton);
+              }
+            });
+            
+            deleteButton.on('click', function() {
+              // Se já existe foto no servidor, deleta via AJAX
+              var fotoStatus = (typeof TipoUploader !== 'undefined' && TipoUploader.uploadStatus && TipoUploader.uploadStatus[foto.id] && TipoUploader.uploadStatus[foto.id].status === 'success');
+              if (fotoStatus) {
+                $.post('/ordens/delete-tipo-foto/', {
+                  ordem_id: ordemId,
+                  tipo_id: foto.id,
+                  csrfmiddlewaretoken: $('[name=csrfmiddlewaretoken]').val()
+                }, function(resp) {
+                  if (resp && resp.success) {
+                    fileInput.val('');
+                    cameraIcon.removeClass('loading green red basic').addClass('basic').html('<i class="camera icon"></i>');
+                    deleteButton.hide();
+                    field.find('.tipo-photo-thumb').remove();
+                    if (typeof TipoUploader !== 'undefined' && TipoUploader.uploadStatus) {
+                      delete TipoUploader.uploadStatus[foto.id];
+                    }
+                    updatePhotoCounter();
+                  } else {
+                    alert('Erro ao deletar foto.');
+                  }
+                });
+              } else {
+                fileInput.val('');
+                cameraIcon.removeClass('loading green red basic').addClass('basic').html('<i class="camera icon"></i>');
+                deleteButton.hide();
+                field.find('.tipo-photo-thumb').remove();
+                updatePhotoCounter();
+              }
+            });
+            
+            // Se já existe foto para este tipo, mostrar apenas os botões (sem miniatura)
+            if (typeof TipoUploader !== 'undefined' && TipoUploader.uploadStatus && TipoUploader.uploadStatus[foto.id]) {
+              deleteButton.show();
+              cameraIcon.addClass('green');
+              fileInput.data('foto-salva', true);
+            }
+            
+            fileInputContainer.append(fileInput, cameraIcon, deleteButton);
+            field.append(label, fileInputContainer);
+            return field;
+          }
+          
+          // Função para mostrar popup da foto do tipo
+          function showTipoFotoPopup(url, descricao) {
+            $('#tipo-photo-fullscreen').remove();
+            var fullscreenImg = $(`
+              <div id="tipo-photo-fullscreen" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9999;background:#000;display:flex;align-items:center;justify-content:center;cursor:zoom-out;">
+                <div style="text-align:center;">
+                  <h3 style="color:white;margin-bottom:1em;">${descricao}</h3>
+                  <img src="${url}" alt="Foto ${descricao}" style="max-width:100vw;max-height:90vh;object-fit:contain;">
+                </div>
+              </div>
+            `);
+            fullscreenImg.on('click', function() {
+              $('#tipo-photo-fullscreen').remove();
+            });
+            $(document).on('keydown.tipoPhotoEsc', function(e) {
+              if (e.key === 'Escape') {
+                $('#tipo-photo-fullscreen').remove();
+                $(document).off('keydown.tipoPhotoEsc');
+              }
+            });
+            fullscreenImg.on('remove', function() {
+              $(document).off('keydown.tipoPhotoEsc');
+            });
+            $(document.body).append(fullscreenImg);
+          }
+          
+          // Preparar fotos para layout em duas colunas
+          var fotosFields = [];
+          for (var i = 0; i < fotosDoLocal.length; i++) {
+            fotosFields.push(createFotoLocalField(fotosDoLocal[i]));
+          }
+        }
+
+        // NOVO: Mostrar todas as câmeras do local
+        if (todasCameras && todasCameras.length) {
+          
+          // Ordenar todas as câmeras
+          todasCameras.sort(function(a, b) {
+            function extractSuffix(cam) {
+              var titulo = cam.Titulo || '';
+              var match = titulo.match(/\[([^\]]+)\]/);
+              var sufixo = match ? match[1].trim() : titulo.split('-').pop().trim();
+              var parts = sufixo.match(/^(\D+)\s*(\d+)$/);
+              if (parts) {
+                var tipo = parts[1].trim();
+                var num = parseInt(parts[2], 10);
+                return { tipo: tipo, numero: num };
+              }
+              return { tipo: sufixo, numero: 0 };
+            }
+            var sufixoA = extractSuffix(a);
+            var sufixoB = extractSuffix(b);
+            if (sufixoA.tipo !== sufixoB.tipo) {
+              return sufixoA.tipo.localeCompare(sufixoB.tipo);
+            }
+            return sufixoA.numero - sufixoB.numero;
+          });
+
+          // Criar mapa de câmeras no chamado para verificação rápida
+          var camerasNoChamado = {};
+          if (cameras) {
+            cameras.forEach(function(cam) {
+              camerasNoChamado[cam.ID] = true;
+            });
+          }
+
+                     // Layout em duas colunas para fotos + câmeras
+           var leftColumn = $('<div class="left-column"></div>');
+           var rightColumn = $('<div class="right-column"></div>');
+           
+           // Distribuir fotos do local primeiro (lado a lado)
+           if (fotosDoLocal && fotosDoLocal.length) {
+             for (var i = 0; i < fotosDoLocal.length; i++) {
+               if (i % 2 === 0) {
+                 leftColumn.append(fotosFields[i]);
+               } else {
+                 rightColumn.append(fotosFields[i]);
+               }
+             }
+           }
+           
+           // Preparar câmeras para distribuição
+           var camerasFields = [];
+           todasCameras.forEach(function(cam) {
+             if (camerasNoChamado[cam.ID]) {
+               camerasFields.push(createCameraField(cam));
+             } else {
+               camerasFields.push(createCameraFieldVisual(cam));
+             }
+           });
+           
+           // Calcular quantos campos já foram adicionados em cada coluna
+           var leftCount = leftColumn.children().length;
+           var rightCount = rightColumn.children().length;
+           
+           // Distribuir câmeras de forma equilibrada
+           camerasFields.forEach(function(camField, index) {
+             if (leftCount <= rightCount) {
+               leftColumn.append(camField);
+               leftCount++;
+             } else {
+               rightColumn.append(camField);
+               rightCount++;
+             }
+           });
+
+          // Função para criar campo de câmera com foto (para câmeras no chamado)
+          function createCameraField(cam) {
+            var titulo = cam.Titulo || '';
+            var match = titulo.match(/\[([^\]]+)\]/);
+            var sufixo = match ? match[1].trim() : titulo.split('-').pop().trim();
+            var emoji = cam.Status === 'Online' ? '🟢' : cam.Status === 'Offline' ? '🔴' : '';
+            var timeDisplay = '';
+            if (cam.Atualizado_em) {
+              const updatedAt = new Date(cam.Atualizado_em);
+              const diffMs = Date.now() - updatedAt.getTime();
+              const totalMin = Math.floor(diffMs / 60000);
+              const days = Math.floor(totalMin / (60 * 24));
+              const hours = Math.floor((totalMin % (60 * 24)) / 60);
+              const minutes = totalMin % 60;
+              const parts = [];
+              if (days) parts.push(days + 'd');
+              if (hours) parts.push(hours + 'h');
+              parts.push(minutes + 'm');
+              timeDisplay = ' <span style="color: #767676; font-size: 0.9em;">(' + parts.join(' ') + ')</span>';
+            }
+            var numeroSerie = cam.Numero_serie || 'N/A';
+            var field = $('<div class="field camera-upload-field"></div>');
+            var label = $('<label>'+ emoji +' '+ sufixo + ' <span style="color: #666; font-size: 0.9em;">SN: ' + numeroSerie + '</span>' + timeDisplay + '</label>');
+            var fileInputContainer = $('<div class="custom-file-input"></div>');
+            var fileInput = $('<input type="file" name="foto_camera_'+ cam.ID +'" accept="image/*" capture="camera" style="display:none;">');
+            var cameraIcon = $('<button type="button" class="ui icon button camera-icon-button"><i class="camera icon"></i></button>');
+            var deleteButton = $('<button type="button" class="ui red icon button delete-photo-button" style="display:none;"><i class="trash icon"></i></button>');
+
+            // Se já existe foto, ao clicar no botão da câmera, abrir popup; se não, abrir input file
+            cameraIcon.on('click', function(e) {
+              e.preventDefault();
+              var fotoStatus = (typeof CameraUploader !== 'undefined' && CameraUploader.uploadStatus && CameraUploader.uploadStatus[cam.ID] && CameraUploader.uploadStatus[cam.ID].status === 'success');
+              var fotoUrl = fotoStatus ? CameraUploader.uploadStatus[cam.ID].url : (fotosPorCamera[cam.ID] ? fotosPorCamera[cam.ID].url : null);
+              if (fotoUrl) {
+                showCameraPhotoPopup(fotoUrl, sufixo, cam.Numero_serie || 'N/A');
+              } else {
+                fileInput.click();
+              }
+            });
+
+            deleteButton.on('click', function() {
+              if (fotosPorCamera[cam.ID]) {
+                $.post('/ordens/delete-camera-foto/', {
+                  ordem_id: ordemId,
+                  camera_id: cam.ID,
+                  csrfmiddlewaretoken: $('[name=csrfmiddlewaretoken]').val()
+                }, function(resp) {
+                  if (resp && resp.success) {
+                    fileInput.val('');
+                    cameraIcon.removeClass('loading green red basic').addClass('basic').html('<i class="camera icon"></i>');
+                    deleteButton.hide();
+                    field.find('.camera-photo-thumb').remove();
+                    delete fotosPorCamera[cam.ID];
+                    updatePhotoCounter();
+                  } else {
+                    alert('Erro ao deletar foto.');
+                  }
+                });
+              } else {
+                fileInput.val('');
+                cameraIcon.removeClass('loading green red basic').addClass('basic').html('<i class="camera icon"></i>');
+                deleteButton.hide();
+                field.find('.camera-photo-thumb').remove();
+                updatePhotoCounter();
+              }
+            });
+
+            // Se já existe foto para esta câmera, mostrar apenas os botões
+            if (fotosPorCamera[cam.ID]) {
+              deleteButton.show();
+              cameraIcon.addClass('green');
+              fileInput.data('foto-salva', true);
+            }
+
+            fileInputContainer.append(fileInput, cameraIcon, deleteButton);
+            field.append(label, fileInputContainer);
+            return field;
+          }
+
+                     // Função para criar campo de câmera apenas visual (sem foto)
+           function createCameraFieldVisual(cam) {
+             var titulo = cam.Titulo || '';
+             var match = titulo.match(/\[([^\]]+)\]/);
+             var sufixo = match ? match[1].trim() : titulo.split('-').pop().trim();
+             var emoji = cam.Status === 'Online' ? '🟢' : cam.Status === 'Offline' ? '🔴' : '';
+             
+             var timeDisplay = '';
+             if (cam.Atualizado_em) {
+               const updatedAt = new Date(cam.Atualizado_em);
+               const diffMs = Date.now() - updatedAt.getTime();
+               const totalMin = Math.floor(diffMs / 60000);
+               const days = Math.floor(totalMin / (60 * 24));
+               const hours = Math.floor((totalMin % (60 * 24)) / 60);
+               const minutes = totalMin % 60;
+               const parts = [];
+               if (days) parts.push(days + 'd');
+               if (hours) parts.push(hours + 'h');
+               parts.push(minutes + 'm');
+               timeDisplay = ' <span style="color: #767676; font-size: 0.9em;">(' + parts.join(' ') + ')</span>';
+             }
+             
+             var numeroSerie = cam.Numero_serie || 'N/A';
+             var field = $('<div class="field camera-upload-field"></div>');
+             var label = $('<label style="color: #999;">'+ emoji +' '+ sufixo + ' <span style="color: #999; font-size: 0.9em;">SN: ' + numeroSerie + '</span>' + timeDisplay + '</label>');
+             var fileInputContainer = $('<div class="custom-file-input"></div>');
+             var cameraIcon = $('<button type="button" class="ui icon button camera-icon-button" disabled style="opacity: 0.3; cursor: not-allowed;"><i class="ban icon"></i></button>');
+             
+             fileInputContainer.append(cameraIcon);
+             field.append(label, fileInputContainer);
+             return field;
+           }
+
+          // Função para mostrar popup da foto da câmera
+          function showCameraPhotoPopup(url, sufixo, sn) {
+            $('#camera-photo-fullscreen').remove();
+            var fullscreenImg = $(`
+              <div id="camera-photo-fullscreen" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9999;background:#000;display:flex;align-items:center;justify-content:center;cursor:zoom-out;">
+                <img src="${url}" alt="Foto da câmera" style="max-width:100vw;max-height:100vh;object-fit:contain;">
+              </div>
+            `);
+            fullscreenImg.on('click', function() {
+              $('#camera-photo-fullscreen').remove();
+            });
+            $(document).on('keydown.cameraPhotoEsc', function(e) {
+              if (e.key === 'Escape') {
+                $('#camera-photo-fullscreen').remove();
+                $(document).off('keydown.cameraPhotoEsc');
+              }
+            });
+            fullscreenImg.on('remove', function() {
+              $(document).off('keydown.cameraPhotoEsc');
+            });
+            $(document.body).append(fullscreenImg);
+          }
+
+          function updatePhotoCounter() {
+            var totalCameras = $("input[type='file'][name^='foto_camera_']").length;
+            var totalFotosTipos = $("input[type='file'][name^='foto_tipo_']").length;
+            var totalFotosNecessarias = totalCameras + totalFotosTipos;
+            
+            var fotosCamera = 0;
+            if (typeof CameraUploader !== 'undefined' && CameraUploader.uploadStatus) {
+                fotosCamera = Object.keys(CameraUploader.uploadStatus).filter(key =>
+                    CameraUploader.uploadStatus[key].status === 'success'
+                ).length;
+            }
+            
+            var fotosTipos = 0;
+            if (typeof TipoUploader !== 'undefined' && TipoUploader.uploadStatus) {
+                fotosTipos = Object.keys(TipoUploader.uploadStatus).filter(key =>
+                    TipoUploader.uploadStatus[key].status === 'success'
+                ).length;
+            }
+            
+            var totalPhotos = fotosCamera + fotosTipos;
+            
+            $('#photo-counter-button').text(totalPhotos + '/' + totalFotosNecessarias);
+            if (totalPhotos >= totalFotosNecessarias) {
+                $('#finalizar-form button[type="submit"]').removeClass('disabled');
+                $('#photo-counter-button').removeClass('yellow').addClass('green');
+            } else {
+                $('#finalizar-form button[type="submit"]').addClass('disabled');
+                $('#photo-counter-button').removeClass('green').addClass('yellow');
+            }
+          }
+
+                     
+          
+                                // Adicionar ao container com layout em colunas
+           var totalFields = (fotosDoLocal ? fotosDoLocal.length : 0) + (todasCameras ? todasCameras.length : 0);
+           var maxHeight = totalFields > 6 ? '280px' : 'auto';
+           
+           container.css({
+             'display': 'grid',
+             'grid-template-columns': '1fr 1fr',
+             'gap': '1em',
+             'max-height': maxHeight,
+             'overflow-y': totalFields > 6 ? 'auto' : 'visible',
+             'padding-right': totalFields > 6 ? '10px' : '0'
+           }).append(leftColumn).append(rightColumn);
+          
+          $('#finalizar-form button[type="submit"]').addClass('disabled');
+          updatePhotoCounter();
+          
+          // Atualiza a label do botão com a contagem correta
+          var totalPhotos = 0;
+          if (typeof CameraUploader !== 'undefined' && CameraUploader.uploadStatus) {
+              totalPhotos = Object.keys(CameraUploader.uploadStatus).filter(key =>
+                  CameraUploader.uploadStatus[key].status === 'success'
+                ).length;
+          }
+          var fotosTipos = 0;
+          if (typeof TipoUploader !== 'undefined' && TipoUploader.uploadStatus) {
+              fotosTipos = Object.keys(TipoUploader.uploadStatus).filter(key =>
+                  TipoUploader.uploadStatus[key].status === 'success'
+              ).length;
+          }
+          totalPhotos += fotosTipos;
+          $('#finalizar-form button[type="submit"]').html('Finalizar <span id="photo-counter-button" class="ui ' + (totalPhotos >= totalFotosNecessarias ? 'green' : 'yellow') + ' label">' + totalPhotos + '/' + totalFotosNecessarias + '</span>');
+          $('#finalizar-modal').modal('show');
+        }
+      }); // Fechar o $.when().done()
+    });
+
+    // Sistema de upload para fotos de tipos (similar ao das câmeras)
+    window.TipoUploader = {
+      uploadStatus: {},
+      
+      init: function() {
+        this.uploadStatus = {};
+      }
+    };
+
+    // Inicializar TipoUploader
+    TipoUploader.init();
+
+    // Função para upload de foto de tipo
+    function uploadTipoFoto(tipoId, file, cameraIcon, deleteButton) {
+      var ordemId = $('#finalizar-ordem-id').val();
+      
+      if (!file || !ordemId || !tipoId) {
+        console.error('Dados incompletos para upload');
+        return;
+      }
+
+      var formData = new FormData();
+      formData.append('foto', file);
+      formData.append('ordem_id', ordemId);
+      formData.append('tipo_id', tipoId);
+      formData.append('csrfmiddlewaretoken', $('[name=csrfmiddlewaretoken]').val());
+
+      // Mostrar loading
+      cameraIcon.addClass('loading');
+
+      $.ajax({
+        url: '/ordens/upload-tipo-foto/',
+        type: 'POST',
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function(response) {
+          cameraIcon.removeClass('loading');
+          if (response.success) {
+            cameraIcon.removeClass('loading basic green red').addClass('green').html('<i class="check icon"></i>');
+            deleteButton.show();
+            
+            // Armazenar status do upload
+            if (typeof TipoUploader !== 'undefined') {
+              TipoUploader.uploadStatus[tipoId] = {
+                status: 'success',
+                url: response.foto_url,
+                message: response.message
+              };
+            }
+            
+            updatePhotoCounter();
+            console.log('Upload realizado:', response.message);
+          } else {
+            alert('Erro no upload: ' + response.message);
+          }
+        },
+        error: function(xhr, status, error) {
+          cameraIcon.removeClass('loading');
+          console.error('Erro no upload:', error);
+          alert('Erro no upload da foto');
+        }
+      });
+    }
+
+    // Handler para interceptar o submit do formulário de finalização
+    $(document).on('submit', '#finalizar-form', function(e) {
+      e.preventDefault();
+      var formData = new FormData(this);
+      
+      // Adicionar dados dos uploads incrementais das câmeras
+      if (typeof CameraUploader !== 'undefined' && CameraUploader.uploadStatus) {
+        formData.append('uploaded_photos', JSON.stringify(CameraUploader.uploadStatus));
+      }
+      
+      // Adicionar dados dos uploads incrementais dos tipos
+      if (typeof TipoUploader !== 'undefined' && TipoUploader.uploadStatus) {
+        formData.append('uploaded_tipos', JSON.stringify(TipoUploader.uploadStatus));
+      }
+      
+      // Desabilitar botão de submit durante o envio
+      var $submitBtn = $(this).find('button[type="submit"]');
+      $submitBtn.addClass('loading disabled');
+      
+      $.ajax({
+        url: '/ordens/finalizar/',
+        type: 'POST',
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function(response) {
+          $submitBtn.removeClass('loading disabled');
+          if (response.success) {
+            if (typeof showNotification === 'function') {
+              showNotification(response.message, 'positive');
+            }
+            setTimeout(function() { 
+              window.location.reload(); 
+            }, 1000);
+          } else {
+            alert('Erro: ' + response.message);
+          }
+        },
+        error: function() {
+          $submitBtn.removeClass('loading disabled');
+          alert('Erro ao finalizar ordem.');
+        }
+      });
+    });
+
+    window.updatePhotoCounter = function() {
+      var totalCameras = $("input[type='file'][name^='foto_camera_']").length;
+      var totalFotosTipos = $("input[type='file'][name^='foto_tipo_']").length;
+      var totalFotosNecessarias = totalCameras + totalFotosTipos;
+      var fotosCamera = 0;
+      if (typeof CameraUploader !== 'undefined' && CameraUploader.uploadStatus) {
+          fotosCamera = Object.keys(CameraUploader.uploadStatus).filter(key =>
+              CameraUploader.uploadStatus[key].status === 'success'
+          ).length;
+      }
+      var fotosTipos = 0;
+      if (typeof TipoUploader !== 'undefined' && TipoUploader.uploadStatus) {
+          fotosTipos = Object.keys(TipoUploader.uploadStatus).filter(key =>
+              TipoUploader.uploadStatus[key].status === 'success'
+          ).length;
+      }
+      var totalPhotos = fotosCamera + fotosTipos;
+      $('#photo-counter-button').text(totalPhotos + '/' + totalFotosNecessarias);
+      if (totalPhotos >= totalFotosNecessarias) {
+          $('#finalizar-form button[type="submit"]').removeClass('disabled');
+          $('#photo-counter-button').removeClass('yellow').addClass('green');
+      } else {
+          $('#finalizar-form button[type="submit"]').addClass('disabled');
+          $('#photo-counter-button').removeClass('green').addClass('yellow');
+      }
+    }
+</script>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para trocar senha -->
+  <div class="ui modal" id="trocar-senha-modal">
+    <div class="header">
+      <i class="lock icon"></i>
+      Trocar Senha
+    </div>
+    <div class="content">
+      <form class="ui form" id="trocar-senha-form">
+        <input type="hidden" name="csrfmiddlewaretoken" value="qv6AgMfWax1UXWNkX2UAIUECoWLcFcxRZ3sfzBleBqLZXZWRO3Xk9lS6pS6ZFqKt">
+        <div class="field">
+          <label>Senha Atual</label>
+          <input type="password" name="senha_atual" required>
+        </div>
+        <div class="field">
+          <label>Nova Senha</label>
+          <input type="password" name="nova_senha" required>
+        </div>
+        <div class="field">
+          <label>Confirmar Nova Senha</label>
+          <input type="password" name="confirmar_senha" required>
+        </div>
+      </form>
+    </div>
+    <div class="actions">
+      <button class="ui button" onclick="$('#trocar-senha-modal').modal('hide')">Cancelar</button>
+      <button class="ui primary button" id="salvar-senha-btn">
+        <i class="save icon"></i>
+        Salvar
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal para adicionar usuário -->
+  <div class="ui modal" id="adicionar-usuario-modal">
+    <div class="header">
+      <i class="user plus icon"></i>
+      Adicionar Usuário
+    </div>
+    <div class="content">
+      <form class="ui form" id="adicionar-usuario-form">
+        <input type="hidden" name="csrfmiddlewaretoken" value="qv6AgMfWax1UXWNkX2UAIUECoWLcFcxRZ3sfzBleBqLZXZWRO3Xk9lS6pS6ZFqKt">
+        <div class="two fields">
+          <div class="field">
+            <label>Nome de Usuário</label>
+            <input type="text" name="username" required>
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" required>
+          </div>
+        </div>
+        <div class="two fields">
+          <div class="field">
+            <label>Primeiro Nome</label>
+            <input type="text" name="first_name" required>
+          </div>
+          <div class="field">
+            <label>Sobrenome</label>
+            <input type="text" name="last_name" required>
+          </div>
+        </div>
+        <div class="two fields">
+          <div class="field">
+            <label>Senha</label>
+            <input type="password" name="password" required>
+          </div>
+          <div class="field">
+            <label>Confirmar Senha</label>
+            <input type="password" name="confirm_password" required>
+          </div>
+        </div>
+        <div class="field">
+          <label>Grupo de Permissão</label>
+          <select class="ui dropdown" name="group" required>
+            <option value="">Selecione um grupo</option>
+            <option value="TECNICOS">TECNICOS</option>
+            <option value="NOC">NOC</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <div class="actions">
+      <button class="ui button" onclick="$('#adicionar-usuario-modal').modal('hide')">Cancelar</button>
+      <button class="ui primary button" id="salvar-usuario-btn">
+        <i class="save icon"></i>
+        Salvar
+      </button>
+    </div>
+  </div>
+
+  <script src="jquery-3.6.0.min.js"></script>
+  <script src="semantic.min.js"></script>
+  <script src="/static/js/camera_upload.js"></script>
+  <script>
+    // Função para obter token CSRF de forma robusta
+    function getCSRFToken() {
+      // Tenta obter o token de várias formas
+      let token = null;
+      
+      // Método 1: Buscar por name attribute
+      const csrfInput = document.querySelector('[name=csrfmiddlewaretoken]');
+      if (csrfInput && csrfInput.value) {
+        token = csrfInput.value;
+      }
+      
+      // Método 2: Buscar por cookie
+      if (!token) {
+        const cookies = document.cookie.split(';');
+        for (let cookie of cookies) {
+          const [name, value] = cookie.trim().split('=');
+          if (name === 'csrftoken') {
+            token = value;
+            break;
+          }
+        }
+      }
+      
+      // Método 3: Buscar por meta tag
+      if (!token) {
+        const metaTag = document.querySelector('meta[name=csrf-token]');
+        if (metaTag) {
+          token = metaTag.getAttribute('content');
+        }
+      }
+      
+      if (!token) {
+        console.error('Token CSRF não encontrado');
+        return '';
+      }
+      
+      return token;
+    }
+    
+    // Função para exibir notificações
+    function showNotification(message, type) {
+      var icon;
+      switch(type) {
+        case 'positive': icon = 'check circle'; break;
+        case 'negative': icon = 'exclamation circle'; break;
+        case 'warning':  icon = 'warning circle'; break;
+        default: icon = 'info circle';
+      }
+      var $notif = $('<div class="ui message ' + type + '"><i class="close icon"></i><i class="' + icon + ' icon"></i>' + message + '</div>');
+      $('#notification-container').append($notif);
+      $notif.find('.close').on('click', function(){
+        $(this).closest('.message').transition('fade');
+      });
+      setTimeout(function(){
+        $notif.transition('fade');
+      }, 5000);
+    }
+
+    $(document).ready(function(){
+      // Inicializar toast globalmente
+      $('body').toast({
+        displayTime: 0,
+        minDisplayTime: 1000,
+        wordsPerMinute: 120,
+        showIcon: true,
+        newestOnTop: true,
+        showProgress: 'bottom',
+        pauseOnHover: true,
+        position: 'top right'
+      });
+
+      // Inicializar dropdowns com configurações específicas para mobile
+      $('.ui.dropdown').dropdown({
+        on: 'click',
+        action: 'hide',
+        clearable: false,
+        showOnFocus: false,
+        allowAdditions: false,
+        hideOnSelect: true,
+        selectOnKeydown: false,
+        forceSelection: true,
+        allowTab: false,
+        allowReselection: false,
+        allowCategorySelection: false,
+        allowNoResults: false,
+        allowValues: false,
+        allowAdditions: false,
+        allowCategorySelection: false,
+        allowNoResults: false,
+        allowReselection: false,
+        allowTab: false,
+        allowValues: false,
+        clearable: false,
+        forceSelection: true,
+        hideOnSelect: true,
+        selectOnKeydown: false,
+        showOnFocus: false,
+        onShow: function() {
+          // Ajuste específico para mobile
+          if (window.innerWidth <= 600) {
+            var $menu = $(this).find('.menu');
+            var $dropdown = $(this);
+            var dropdownRect = $dropdown[0].getBoundingClientRect();
+            var menuHeight = $menu.outerHeight();
+            var viewportHeight = window.innerHeight;
+            var menuWidth = 160; // Largura fixa para mobile
+            
+            // Calcular posição vertical
+            var topPosition = dropdownRect.bottom + 5;
+            
+            // Se o menu vai sair da tela embaixo, posicionar acima do dropdown
+            if (topPosition + menuHeight > viewportHeight - 20) {
+              topPosition = dropdownRect.top - menuHeight - 5;
+            }
+            
+            // Garantir que não saia da tela no topo
+            if (topPosition < 10) {
+              topPosition = 10;
+            }
+            
+            // Calcular posição horizontal
+            var rightPosition = 10;
+            
+            // Se o menu vai sair da tela na direita, ajustar
+            if (dropdownRect.right - menuWidth < 10) {
+              rightPosition = viewportHeight - menuWidth - 10;
+            }
+            
+            // Aplicar posicionamento
+            $menu.css({
+              'position': 'fixed',
+              'top': topPosition + 'px',
+              'left': 'auto',
+              'right': rightPosition + 'px',
+              'width': menuWidth + 'px',
+              'max-width': menuWidth + 'px',
+              'max-height': (viewportHeight - topPosition - 20) + 'px',
+              'overflow-y': 'auto',
+              'margin-top': '0'
+            });
+          }
+        }
+      });
+
+      // Event handlers for settings dropdown
+      $('#trocar-senha-dropdown').click(function() {
+        $('#trocar-senha-modal').modal('show');
+      });
+
+      $('#adicionar-usuario-dropdown').click(function() {
+        $('#adicionar-usuario-modal').modal('show');
+        // Inicializar dropdown do modal
+        $('#adicionar-usuario-modal .ui.dropdown').dropdown();
+      });
+
+      $('#toggle-theme-dropdown').click(function() {
+        document.body.classList.toggle('dark-theme');
+        const isDark = document.body.classList.contains('dark-theme');
+        
+        // Update logo
+        const logoLight = "img/logo-light.png";
+        const logoDark = "img/logo-dark.png";
+        $('.logo-header').attr('src', isDark ? logoDark : logoLight);
+        
+        // Save on server
+        const csrfToken = getCSRFToken();
+        fetch('/set_theme/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'X-CSRFToken': csrfToken
+          },
+          body: 'theme=' + (isDark ? 'dark' : 'light')
+        });
+      });
+
+      // Salvar nova senha
+      $('#salvar-senha-btn').click(function() {
+        const formData = new FormData($('#trocar-senha-form')[0]);
+        
+        fetch('/configuracoes/trocar-senha/', {
+          method: 'POST',
+          headers: {
+            'X-CSRFToken': getCSRFToken()
+          },
+          body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            showNotification(data.message, 'positive');
+            $('#trocar-senha-modal').modal('hide');
+            $('#trocar-senha-form')[0].reset();
+          } else {
+            showNotification(data.message, 'negative');
+          }
+        })
+        .catch(error => {
+          showNotification('Erro ao processar a solicitação', 'negative');
+        });
+      });
+
+      // Salvar novo usuário
+      $('#salvar-usuario-btn').click(function() {
+        const formData = new FormData($('#adicionar-usuario-form')[0]);
+        
+        fetch('/usuarios/adicionar-ajax/', {
+          method: 'POST',
+          headers: {
+            'X-CSRFToken': getCSRFToken()
+          },
+          body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            showNotification(data.message, 'positive');
+            $('#adicionar-usuario-modal').modal('hide');
+            $('#adicionar-usuario-form')[0].reset();
+          } else {
+            showNotification(data.message, 'negative');
+          }
+        })
+        .catch(error => {
+          showNotification('Erro ao processar a solicitação', 'negative');
+        });
+      });
+      
+      // Fechar dropdown quando clicar fora dele (especialmente útil no mobile)
+      $(document).on('click', function(e) {
+        if (!$(e.target).closest('.ui.dropdown').length) {
+          $('.ui.dropdown').dropdown('hide');
+        }
+      });
+      
+      // Prevenir que o dropdown feche quando clicar dentro dele
+      $('.ui.dropdown .menu').on('click', function(e) {
+        e.stopPropagation();
+      });
+      
+      // Recalcular posição do dropdown quando a janela for redimensionada
+      $(window).on('resize', function() {
+        if (window.innerWidth <= 600) {
+          var $activeDropdown = $('.ui.dropdown.active');
+          if ($activeDropdown.length) {
+            $activeDropdown.dropdown('hide');
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

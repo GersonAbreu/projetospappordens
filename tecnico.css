@@ -1,0 +1,863 @@
+/* ========================================
+   SPTEC - Layout Técnico
+   ======================================== */
+
+/* ========================================
+   LAYOUT PRINCIPAL
+   ======================================== */
+
+/* Container flex para layout lateral */
+.layout-container {
+  display: flex;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 2em 1em;
+  overflow-y: auto;
+}
+
+/* ========================================
+   SIDEBAR
+   ======================================== */
+
+/* Sidebar styles - SEMPRE RETRAÍDA */
+#sidebar {
+  width: 60px !important;
+  min-width: 60px !important;
+  background-color: #2758a7;
+  padding: 1rem 0.5rem !important;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  overflow-y: auto;
+  min-height: 100vh; 
+  position: relative;
+}
+
+/* Esconde títulos e setas SEMPRE */
+#sidebar .title,
+#sidebar .arrow {
+  display: none !important;
+}
+
+/* Menu items centralizados */
+#sidebar .menu-item {
+  justify-content: center !important;
+  padding: 10px 5px !important;
+  color: white;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+#sidebar .menu-item i {
+  margin-right: 0 !important;
+  font-size: 1.25em !important;
+}
+
+/* Logo container ajustado */
+#sidebar .logo-container {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1rem !important;
+  padding-top: 10px;
+}
+
+#sidebar .logo-container img {
+  max-width: 50px !important;
+  min-width: 50px !important;
+  min-height: 50px !important;
+  object-fit: contain;
+}
+
+/* Style for the theme toggle button and logout link */
+#toggle-theme.menu-item, 
+.logout-item.menu-item {
+  border: none;
+  text-align: left;
+  background: transparent;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.logout-item.menu-item {
+  color: #ff5a5a;
+}
+
+.logout-item.menu-item:hover {
+  background-color: rgba(255, 90, 90, 0.2);
+}
+
+/* Sidebar divider */
+.sidebar-divider {
+  margin: 10px 0;
+  border-color: rgba(255,255,255,0.1);
+}
+
+/* ========================================
+   HEADER BAR
+   ======================================== */
+
+/* Header bar */
+.header-bar {
+  background-color: #2758a7;
+  color: white;
+  padding: 0.7rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-bar .logo-header {
+  height: 40px;
+}
+
+.header-bar .username {
+  font-weight: bold;
+}
+
+/* User section styles */
+.header-bar .user-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-bar .user-section span {
+  font-weight: bold;
+}
+
+.header-bar .settings-dropdown {
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.header-bar .settings-dropdown:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header-bar .settings-dropdown .menu {
+  margin-top: 5px;
+  min-width: 200px;
+}
+
+.header-bar .settings-dropdown .menu .item {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-bar .settings-dropdown .menu .item:hover {
+  background-color: #f8f9fa;
+}
+
+.header-bar .settings-dropdown .menu .divider {
+  margin: 5px 0;
+  border-top: 1px solid #e9ecef;
+}
+
+/* Content wrapper */
+.content-wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Remove a área da logo do topo */
+.logo-area {
+  display: none !important;
+}
+
+/* ========================================
+   DARK THEME
+   ======================================== */
+
+/* Dark theme base */
+.dark-theme { 
+  background-color: #2c2c2c; 
+  color: #e0e0e0; 
+}
+
+.dark-theme #sidebar { 
+  background-color: #1a1a1a; 
+  color: #fff; 
+}
+
+.dark-theme .ui.container.main-content { 
+  background-color: #333; 
+}
+
+.dark-theme .header-bar {
+  background-color: #1a1a1a;
+}
+
+.dark-theme .header-bar .settings-dropdown .menu {
+  background-color: #333;
+  border: 1px solid #555;
+}
+
+.dark-theme .header-bar .settings-dropdown .menu .item {
+  color: #e0e0e0;
+}
+
+.dark-theme .header-bar .settings-dropdown .menu .item:hover {
+  background-color: #444;
+}
+
+.dark-theme .header-bar .settings-dropdown .menu .divider {
+  border-color: #555;
+}
+
+/* Configurações page styles */
+.configuracoes .ui.cards .card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.configuracoes .ui.cards .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dark-theme .configuracoes .ui.cards .card {
+  background-color: #383838;
+  color: #e0e0e0;
+}
+
+.dark-theme .configuracoes .ui.cards .card .header {
+  color: #ffffff;
+}
+
+/* Force white headers in dark-theme */
+.dark-theme .ui.header {
+  color: #ffffff !important;
+}
+
+.dark-theme .ui.header .sub.header {
+  color: #fff !important;
+}
+
+.dark-theme .ui.segment {
+  background-color: #383838 !important;
+  color: #e0e0e0 !important;
+}
+
+/* ========================================
+   TABELAS
+   ======================================== */
+
+/* Tabelas em dark mode */
+.dark-theme .ui.celled.table {
+  background-color: #333 !important;
+  color: #e0e0e0 !important;
+  border-color: #555 !important;
+}
+
+.dark-theme .ui.celled.table thead tr th {
+  background-color: #2c2c2c !important;
+  color: #fff !important;
+  border-color: #555 !important;
+}
+
+.dark-theme .ui.celled.table tbody tr td {
+  background-color: #333 !important;
+  border-color: #555 !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-theme .ui.celled.table tr:hover td {
+  background-color: #3a3a3a !important;
+}
+
+/* Estilo para tabelas na dashboard */
+.dark-theme .ui.segment .ui.header + table,
+.dark-theme .ui.segment table {
+  background-color: #333 !important;
+  color: #e0e0e0 !important;
+  border-color: #555 !important;
+}
+
+/* Estilo para cabeçalho de seções de tabelas */
+.dark-theme .ui.segment .ui.header {
+  color: #ffffff !important;
+}
+
+/* Estilo específico para cabeçalhos das tabelas da dashboard */
+.dark-theme .ui.segment table thead tr th {
+  background-color: #2c2c2c !important;
+  color: #ffffff !important;
+  border-color: #555 !important;
+  font-weight: bold !important;
+  font-size: 0.9em !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* Estilo para células das tabelas da dashboard */
+.dark-theme .ui.segment table tbody tr td {
+  background-color: #333 !important;
+  border-color: #555 !important;
+  color: #e0e0e0 !important;
+}
+
+/* Hover effect para linhas das tabelas da dashboard */
+.dark-theme .ui.segment table tbody tr:hover td {
+  background-color: #3a3a3a !important;
+}
+
+/* Estilo para mensagens vazias nas tabelas */
+.dark-theme .ui.table tr.empty-message td {
+  background-color: #333 !important;
+  color: #999 !important;
+  text-align: center;
+  padding: 20px !important;
+}
+
+/* ========================================
+   MODAIS
+   ======================================== */
+
+/* Centraliza vertical e horizontalmente todos os modais Semantic UI */
+.ui.modal {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  margin: 0 !important;
+  max-width: 90vw !important;
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+.dark-theme .ui.modal {
+  background-color: #444 !important;
+  color: #fff !important;
+}
+
+.dark-theme .ui.modal .header,
+.dark-theme .ui.modal .content,
+.dark-theme .ui.modal .actions {
+  background-color: #2c2c2c !important;
+  color: #e0e0e0 !important;
+}
+
+/* Labels de formulários nos modais em modo escuro */
+.dark-theme .ui.modal .content label,
+.dark-theme .ui.modal .content .field > label {
+  color: #ffffff !important;
+}
+
+.ui.dropdown .menu {
+  z-index: 1000 !important;
+}
+
+/* Dark theme para dimmers */
+.dark-theme .ui.inverted.dimmer {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+/* ========================================
+   NOTIFICAÇÕES
+   ======================================== */
+
+/* Notification container */
+#notification-container {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  z-index: 1050;
+  width: 300px;
+}
+
+/* ========================================
+   CHAMADOS RESPONSIVOS
+   ======================================== */
+
+.responsive-chamados-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.chamado-card .flex-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+
+/* Container para os botões de ação */
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+
+/* Estilos para uniformizar os botões */
+.action-button,
+.map-button {
+  min-width: 100px !important;
+  height: 36px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0.78571429em 1.5em 0.78571429em !important;
+  font-size: 0.92857143em !important;
+}
+
+/* Botão de mapa específico */
+.map-button {
+  min-width: 45px !important;
+  padding: 0.78571429em 1em !important;
+}
+
+/* ========================================
+   UPLOAD DE FOTOS
+   ======================================== */
+
+/* Distribui em 2 colunas os campos de câmera no modal de finalizar */
+#finalizar-cameras-container {
+  display: grid;
+  gap: 1em;
+}
+
+/* Ajuste de margem interna */
+#finalizar-cameras-container .field {
+  margin-bottom: 0;
+}
+
+/* Estilos para campos de upload de foto */
+.custom-file-input {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+/* Contador de fotos */
+.photo-counter {
+  margin-bottom: 1em;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Estilo para o contador no botão */
+#photo-counter-button {
+  margin-left: 8px;
+  font-size: 0.9em;
+}
+
+/* Quando todas as fotos são enviadas */
+#photo-counter-button.green {
+  background-color: #21BA45 !important;
+  color: white !important;
+}
+
+/* Quando ainda faltam fotos */
+#photo-counter-button.yellow {
+  background-color: #FBBD08 !important;
+  color: black !important;
+}
+
+.delete-photo-button {
+  margin-left: 5px !important;
+}
+
+/* ========================================
+   FORMULÁRIOS
+   ======================================== */
+
+/* Dark theme para formulários */
+.dark-theme textarea,
+textarea {
+  resize: none !important;
+}
+
+.textarea,
+textarea {
+  resize: none !important;
+}
+
+.dark-theme select,
+.dark-theme textarea,
+.dark-theme input[type="text"],
+.dark-theme input[type="email"],
+.dark-theme input[type="number"],
+.dark-theme input[type="password"] {
+  color: #fff !important;
+  background-color: #222 !important;
+  border-color: #444 !important;
+}
+
+.dark-theme ::placeholder {
+  color: #bbb !important;
+  opacity: 1;
+}
+
+.dark-theme .ui.dropdown .text,
+.dark-theme .ui.dropdown .item,
+.dark-theme .ui.selection.dropdown {
+  color: #fff !important;
+  background-color: #222 !important;
+}
+
+.dark-theme .filtros-labels,
+.dark-theme .filtros-labels label,
+.dark-theme .filtros-labels span,
+.dark-theme .filtros-labels th {
+  color: #fff !important;
+}
+
+.dark-theme .ui.input input[type="date"],
+.dark-theme input[type="date"] {
+  color: #fff !important;
+  background-color: #222 !important;
+  border-color: #444 !important;
+}
+
+.dark-theme input[type="date"]::placeholder {
+  color: #bbb !important;
+  opacity: 1;
+}
+
+.dark-theme #abrir-os-modal label {
+  color: #fff !important;
+}
+
+/* ========================================
+   COMENTÁRIOS NO MODO ESCURO
+   ======================================== */
+
+/* Estilos para comentários no modo escuro */
+.dark-theme #comentarios-referencia-container .ui.header {
+  color: #ffffff !important;
+}
+
+.dark-theme #comentarios-referencia-list .event {
+  background-color: rgba(255,255,255,0.05) !important;
+  border-color: #555 !important;
+}
+
+.dark-theme #comentarios-referencia-list .event strong {
+  color: #ffffff !important;
+}
+
+.dark-theme #comentarios-referencia-list .event div[style*="color: #333"] {
+  color: #ffffff !important;
+}
+
+.dark-theme #comentarios-referencia-list .event span[style*="color: #888"] {
+  color: #cccccc !important;
+}
+
+/* ========================================
+   FOTOS E UPLOADS
+   ======================================== */
+
+/* Estilos para fotos já enviadas */
+.ui.dropdown .menu .item[data-ja-enviada="true"] {
+  background-color: #e8f5e8 !important;
+  color: #2d662d !important;
+  border-left: 3px solid #21ba45 !important;
+  position: relative;
+}
+
+.ui.dropdown .menu .item[data-ja-enviada="true"]:hover {
+  background-color: #d4edd4 !important;
+}
+
+.ui.dropdown .menu .item[data-ja-enviada="true"]:before {
+  content: '✅ ';
+  margin-right: 5px;
+}
+
+/* Estilo para as labels selecionadas que já foram enviadas */
+.ui.multiple.dropdown .label {
+  position: relative;
+}
+
+/* ========================================
+   COMPONENTES ESPECÍFICOS
+   ======================================== */
+
+/* Observação padrão */
+.observacao-padrao {
+  margin: 0.5em 0;
+  color: #555;
+}
+
+/* Observação do técnico */
+.observacao-tecnico {
+  margin: 0.5em 0;
+  color: #276f42;
+}
+
+/* Fotos do local */
+.fotos-local {
+  margin: 0.5em 0;
+  color: #2185d0;
+}
+
+/* Status label */
+.status-label {
+  margin: 0.5em 0;
+}
+
+/* Accordion histórico */
+.accordion-historico {
+  margin-top: 2em;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+
+/* Melhorias gerais para o dropdown de configurações */
+.header-bar .settings-dropdown {
+  position: relative;
+  z-index: 1000;
+}
+
+.header-bar .settings-dropdown .menu {
+  z-index: 1001 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  border: 1px solid #e1e1e1;
+}
+
+.header-bar .settings-dropdown .menu .item {
+  transition: background-color 0.2s ease;
+}
+
+.header-bar .settings-dropdown .menu .item:hover {
+  background-color: #f8f9fa;
+}
+
+/* Melhorias para telas médias */
+@media (max-width: 768px) {
+  .header-bar .settings-dropdown .menu {
+    min-width: 160px !important;
+    max-width: 180px !important;
+  }
+  
+  .header-bar .settings-dropdown .menu .item {
+    padding: 10px 12px !important;
+    font-size: 0.9em !important;
+  }
+}
+
+/* Responsividade para celular */
+@media (max-width: 600px) {
+  .main-content {
+    padding: 1em 0.2em !important;
+  }
+  .header-bar {
+    padding: 0.5em 0.7em !important;
+    font-size: 1em;
+  }
+  #sidebar {
+    min-width: 50px !important;
+    width: 50px !important;
+    padding: 0.5rem 0.2rem !important;
+  }
+  
+  /* Correções para o dropdown de configurações no mobile */
+  .header-bar .user-section {
+    gap: 5px;
+  }
+  
+  .header-bar .username {
+    font-size: 0.9em;
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .header-bar .settings-dropdown {
+    padding: 8px;
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header-bar .settings-dropdown .menu {
+    position: fixed !important;
+    left: auto !important;
+    right: 10px !important;
+    margin-top: 5px !important;
+    min-width: 160px !important;
+    max-width: 180px !important;
+    z-index: 1001 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    border-radius: 8px !important;
+    max-height: calc(100vh - 100px) !important;
+    overflow-y: auto !important;
+  }
+  
+  .header-bar .settings-dropdown .menu .item {
+    padding: 12px 15px !important;
+    font-size: 0.95em !important;
+    border-radius: 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+  
+  .header-bar .settings-dropdown .menu .item:first-child {
+    border-top-left-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+  }
+  
+  .header-bar .settings-dropdown .menu .item:last-child {
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+  }
+  
+  .responsive-chamados-list { 
+    padding: 0; 
+  }
+  .chamado-card { 
+    font-size: 1em; 
+  }
+  .chamado-card .flex-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5em;
+  }
+  .chamado-card .right.floated {
+    float: none !important;
+    text-align: left;
+    margin-top: 0.5em;
+  }
+  
+  .action-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .action-button,
+  .map-button {
+    flex: 1;
+    min-width: auto !important;
+  }
+  
+  .camera-upload-field {
+    margin-bottom: 1em !important;
+  }
+  
+  /* Ajustes para o texto de status */
+  .file-status {
+    font-size: 0.85em;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* Dark theme para dropdown no mobile */
+  .dark-theme .header-bar .settings-dropdown .menu {
+    background-color: #333 !important;
+    border: 1px solid #555 !important;
+  }
+  
+  /* Garantir que o dropdown sempre fique visível */
+  .header-bar .settings-dropdown .menu {
+    transform: none !important;
+    transition: none !important;
+    margin-top: 0 !important;
+  }
+  
+  .dark-theme .header-bar .settings-dropdown .menu .item {
+    color: #e0e0e0 !important;
+  }
+  
+  .dark-theme .header-bar .settings-dropdown .menu .item:hover {
+    background-color: #444 !important;
+  }
+}
+
+/* ========================================
+   ESTILOS ESPECÍFICOS PARA TABELAS
+   ======================================== */
+
+.ui.celled.table td, .ui.celled.table th {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ui.celled.table td {
+  font-size: 0.98em;
+  line-height: 1.2em;
+}
+
+.ui.celled.table th {
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
+.ui.celled.table .ui.label {
+  margin: 0;
+  padding: 0.3em 0.7em;
+  font-size: 0.95em;
+}
+
+.table-wrapper {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* ========================================
+   MODAL DE FOTOS
+   ======================================== */
+
+#foto-modal.ui.modal {
+  z-index: 1010 !important;
+}
+
+/* Garante que o dimmer do modal de foto também tenha prioridade */
+#foto-modal.ui.modal ~ .ui.dimmer {
+  z-index: 1009 !important;
+}
+
+/* Modal de câmeras reparadas mantém z-index padrão */
+#cameras-reparadas-modal.ui.modal {
+  z-index: 1000 !important;
+} 
+
+
+
+/* Layout em duas colunas para o modal de finalização */
+#finalizar-cameras-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+#finalizar-cameras-container .left-column,
+#finalizar-cameras-container .right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  #finalizar-cameras-container {
+    grid-template-columns: 1fr;
+    max-height: 400px;
+  }
+} 
